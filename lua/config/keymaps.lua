@@ -68,3 +68,7 @@ vim.keymap.set("n", "<leader>da", function()
   local cmd = string.format('clang++ --debug "%s" -o main', file)
   vim.cmd("!" .. cmd)
 end, { desc = "Compile C++ file with clang++" })
+
+vim.keymap.set("n", "<leader>dq", function()
+  vim.cmd("terminal ./main")
+end, { desc = "Run compiled program" })
